@@ -1,0 +1,19 @@
+{
+  "name": "scale-cli",
+  "version": "1.0.0",
+  "description": "Scale all numbers in the input file",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node ./src/bin/index.ts"
+  },
+  "bin": {
+    "scale-cli": "./src/bin/index.js"
+  },
+  "author": "BDW",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.8.5",
+    "commander": "^9.4.1",
+    "typescript": "^4.8.4"
+  }
+}

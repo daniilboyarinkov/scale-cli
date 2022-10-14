@@ -1,0 +1,14 @@
+{
+  // default alt+shift+F formater
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Format code on ctrl+S
+  "editor.formatOnSave": true,
+
+  // Langs for cSpell extension
+  "cSpell.language": "en,ru",
+
+  // Fira code to improve code readability
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true
+}
