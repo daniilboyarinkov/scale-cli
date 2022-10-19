@@ -1,0 +1,164 @@
+<svg width="100%" height="100%" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {
+      --dist: 3.5px;
+    }
+
+    .star {
+      animation-duration: 3s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+      animation-delay: 1s;
+    }
+
+    .star-br {
+      animation-name: shake-br;
+    }
+
+    .star-tr {
+      animation-name: shake-tr;
+    }
+
+    .star-bl {
+      animation-name: shake-bl;
+    }
+
+    .star-tl {
+      animation-name: shake-tl;
+    }
+
+    @keyframes shake-br {
+      40% {
+        transform: translateX(var(--dist)) translateY(var(--dist));
+      }
+    }
+
+    @keyframes shake-tr {
+      40% {
+        transform: translateX(var(--dist)) translateY(calc(var(--dist) * -1));
+      }
+    }
+
+    @keyframes shake-bl {
+      40% {
+        transform: translateX(calc(var(--dist) * -1)) translateY(var(--dist));
+      }
+    }
+
+    @keyframes shake-tl {
+      40% {
+        transform: translateX(calc(var(--dist) * -1)) translateY(calc(var(--dist) * -1));
+      }
+    }
+  </style>
+
+  <defs>
+    <radialGradient id="Gradient" cx="0.5" cy="0.5" r="0.5" fx="0.3" fy="0.4">
+      <stop offset="0%" stop-color="#ffdbfb" ></stop>
+      <stop offset="100%" stop-color="#6667ab" ></stop>
+    </radialGradient>
+    <radialGradient id="FrogGradient" cx="0.5" cy="0.5" r="0.5" fx="0.3" fy="0.3">
+      <stop offset="0%" stop-color="#dbdbdb" ></stop>
+      <stop offset="100%" stop-color="#656565" ></stop>
+    </radialGradient>
+  </defs>
+
+  
+  <circle cx="100" cy="100" r="100" fill="url(#Gradient)">
+    <animateTransform attributeName="transform" type="rotate" values="0, 100, 100; 720, 100, 100" dur="7s" repeatCount="indefinite"></animateTransform>
+  </circle>
+
+  <g>
+    <g>
+      <circle class="star star-br" data-num="1" cx="65" cy="14" r="2" fill="#fff"></circle>
+      <circle class="star " data-num="2" cx="79" cy="14" r="2" fill="#fff"></circle>
+      <circle class="star star-bl" data-num="3" cx="93" cy="14" r="2" fill="#fff"></circle>
+      <circle class="star star-br" data-num="4" cx="107" cy="14" r="2" fill="#fff"></circle>
+      <circle class="star " data-num="5" cx="121" cy="14" r="2" fill="#fff"></circle>
+      <circle class="star star-bl" data-num="6" cx="135" cy="14" r="2" fill="#fff"></circle>
+    </g>
+
+    <g>
+      <circle class="star star-tr" data-num="7" cx="65" cy="28" r="2" fill="#fff"></circle>
+      <circle class="star star-tl" data-num="8" cx="79" cy="28" r="2" fill="#fff"></circle>
+      <circle class="star star-br" data-num="9" cx="93" cy="28" r="2" fill="#fff"></circle>
+      <circle class="star star-bl" data-num="10" cx="107" cy="28" r="2" fill="#fff"></circle>
+      <circle class="star star-tr" data-num="11" cx="121" cy="28" r="2" fill="#fff"></circle>
+      <circle class="star star-tl" data-num="12" cx="135" cy="28" r="2" fill="#fff"></circle>
+    </g>
+
+    <g>
+      <circle class="star star-tl" data-num="13" cx="79" cy="42" r="2" fill="#fff"></circle>
+      <circle class="star star-bl" data-num="14" cx="93" cy="42" r="2" fill="#fff"></circle>
+      <circle class="star star-br" data-num="15" cx="107" cy="42" r="2" fill="#fff"></circle>
+      <circle class="star star-tr" data-num="16" cx="121" cy="42" r="2" fill="#fff"></circle>
+    </g>
+
+    <g>
+      <circle class="star star-br" cx="93" data-num="17" cy="56" r="2" fill="#fff"></circle>
+      <circle class="star star-bl" cx="107" data-num="18" cy="56" r="2" fill="#fff"></circle>
+    </g>
+
+    
+    <ellipse cx="100" cy="160" rx="96" ry="15.34" fill="#ffffff22" stroke="#dddddd44" stroke-width="1">
+      <animate attributeName="rx" values="42;74;42" dur="4.28s" repeatCount="indefinite"></animate>
+      <animate attributeName="ry" values="6;15.34;6" dur="4.28s" repeatCount="indefinite"></animate>
+    </ellipse>
+    <ellipse cx="100" cy="160" rx="0" ry="0" fill="#ffffff22" stroke="#dddddd44" stroke-width="1">
+      <animate begin="2.14s" attributeName="rx" values="42;74;42" dur="4.28s" repeatCount="indefinite"></animate>
+      <animate begin="2.14s" attributeName="ry" values="6;15.34;6" dur="4.28s" repeatCount="indefinite"></animate>
+    </ellipse>
+
+    
+    <ellipse cx="61.28" cy="151.34" rx="6.74" ry="15.34" fill="#363636" stroke="#000" stroke-width="0.01">
+      <animateTransform attributeName="transform" type="rotate" values="0, 62, 150; -50, 62, 150; 0, 62, 150" dur="2.14s" repeatCount="indefinite"></animateTransform>
+    </ellipse>
+    <ellipse cx="138.72" cy="151.34" rx="6.74" ry="15.34" fill="#363636" stroke="#000" stroke-width="0.01">
+      <animateTransform attributeName="transform" type="rotate" values="0, 140, 150; 50, 140, 150; 0, 140, 150" dur="2.14s" repeatCount="indefinite"></animateTransform>
+    </ellipse>
+
+  </g>
+
+  
+  <ellipse cx="100" cy="120" fill="url(#FrogGradient)" rx="60" ry="46" stroke="#000" stroke-width="0.01">
+    <animate attributeName="ry" values="46;44.46;46" dur="2.12s" repeatCount="indefinite"></animate>
+  </ellipse>
+
+  <g>
+    
+    <circle cx="61.28" cy="85.32" r="26.68" fill="#fff" stroke="#000" stroke-width="0.01">
+      <animate attributeName="r" values="25.6;26.68;25.6" dur="2.12s" repeatCount="indefinite"></animate>
+    </circle>
+    <circle cx="138.72" cy="85.32" r="26.68" fill="#fff" stroke="#000" stroke-width="0.01">
+      <animate attributeName="r" values="25.6;26.68;25.6" dur="2.12s" repeatCount="indefinite"></animate>
+    </circle>
+
+    
+    <ellipse cx="68" cy="78.66" rx="6.74" ry="6.74" fill="#000" stroke="#000" stroke-width="0.01">
+      <animate attributeName="ry" values="6.74;0;6.74" dur="10s" repeatCount="indefinite"></animate>
+    </ellipse>
+    <ellipse cx="132" cy="78.66" rx="6.74" ry="6.74" fill="#000" stroke="#000" stroke-width="0.01">
+      <animate attributeName="ry" values="6.74;0;6.74" dur="10s" repeatCount="indefinite"></animate>
+    </ellipse>
+
+    
+    <ellipse cx="68" cy="78.66" rx="6.74" fill="#ffffff11" stroke="#000" stroke-width="0.001">
+      <animate attributeName="ry" values="6;6.74;6" dur="2.12s" repeatCount="indefinite"></animate>
+    </ellipse>
+    <ellipse cx="132" cy="78.66" rx="6.74" fill="#ffffff11" stroke="#000" stroke-width="0.001">
+      <animate attributeName="ry" values="6;6.74;6" dur="2.12s" repeatCount="indefinite"></animate>
+    </ellipse>
+
+  </g>
+
+  
+  <ellipse cx="100" cy="135.34" rx="20" ry="6.68" fill="#fff">
+    <animate attributeName="ry" values="0;6;0" dur="4s" repeatCount="indefinite"></animate>
+  </ellipse>
+  <ellipse cx="100" cy="145.34" rx="6.74" ry="1.34" fill="#878787">
+    <animateTransform attributeName="transform" type="translate" values="0, 0; 0, -3; 0, 0" dur="4s" repeatCount="indefinite"></animateTransform>
+    <animate attributeName="ry" values="1.34;0;1.34" dur="4s" repeatCount="indefinite"></animate>
+  </ellipse>
+
+  
+</svg>
